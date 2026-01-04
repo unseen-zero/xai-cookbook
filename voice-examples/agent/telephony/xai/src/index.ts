@@ -537,5 +537,7 @@ app.ws("/outbound-stream", (ws: any, req: any) => {
 const port = process.env.PORT || "3000";
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
+  console.log(`System prompt: ${SYSTEM_PROMPT}`);
+  console.log(`Voice ID: ${VOICE_ID}`);
   console.log(`Tool calling: ${ENABLE_TOOLS ? "ENABLED" : "DISABLED"}`);
 });
